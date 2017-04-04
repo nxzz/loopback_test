@@ -9,6 +9,7 @@ angular
     .module('app', [
         'ui.router',
         'ui.bootstrap',
+        'lbServices',
         Controller.name,
         Directive.name,
         Service.name,
