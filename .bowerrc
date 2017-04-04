@@ -1,0 +1,6 @@
+{
+    "directory": "client/bower_components",
+    "color": true,
+    "timeout": 60000,
+    "save": true
+}
