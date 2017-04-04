@@ -1,3 +1,8 @@
 <div class="container">
-	{{vm.text}}
+	<p>{{vm.text}}</p>
+	<ul>
+		<li ng-repeat="d in vm.list">
+			{{d.body}} ({{d.time | date:'medium'}})
+		</li>
+	</ul>
 </div>
