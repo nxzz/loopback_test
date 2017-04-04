@@ -2,7 +2,7 @@
 
 export default function ($stateProvider, $urlRouterProvider) {
     "ngInject";
-    $stateProvider.state('auth', {
+    $stateProvider.state('index', {
         url: '/',
         template: require('./Template/IndexController.html'),
         controller: 'IndexController',
