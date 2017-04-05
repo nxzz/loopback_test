@@ -13,7 +13,8 @@ module.exports = {
     // ビルド後のファイル
     output: {
         path: path.join(__dirname, "/client/dist"),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        publicPath: "/dist/"
     },
     cache: true,
     // devtool: "source-map",
@@ -40,7 +41,7 @@ module.exports = {
         {
             //bootstrap font
             test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-            loader: 'url-loader?name=[name].[ext]'
+            loader: 'file-loader?name=[name].[ext]'
         },
         {
             test: /\.scss$/,
