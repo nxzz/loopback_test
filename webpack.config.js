@@ -18,16 +18,30 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'ng-annotate!babel'
+            loaders: ['ng-annotate-loader', 'babel-loader']
         }, {
             test: /\.html$/,
-            loader: 'raw!html-minify'
+            loaders: ['raw-loader', 'html-minify-loader']
+        },
+        {
+            test: /\.css$/,
+            loaders: ['style-loader', 'css-loader?modules'],
+        },
+        {
+            //bootstrap font
+            test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+            loader: 'file-loader'
+        },
+        {
+            test: /\.scss$/,
+            loaders: ['style-loader', 'css-loader', 'sass-loader']
         }]
     },
     plugins: [
         // new DashboardPlugin(),
         new webpack.optimize.UglifyJsPlugin({
-            minimize: true
+            minimize: true,
+            warnings: false
         })
     ]
 };

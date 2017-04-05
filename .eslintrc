@@ -17,8 +17,6 @@
     "sourceType": "module"
   },
   "globals": {
-    "io": true,
-    "Terminal": true,
-    "angular": true
+    "io": true
   }
 }
