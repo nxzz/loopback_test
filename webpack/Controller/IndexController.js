@@ -5,8 +5,26 @@ export default class IndexController {
         "ngInject";
         this.$http = $http;
         this.$state = $state;
-        this.text = "Hello";
+        this.Bbslog = Bbslog;
 
-        this.list = Bbslog.find();
+        this.load();
+    }
+
+    load() {
+        this.list = this.Bbslog.find();
+    }
+
+    post(body) {
+        this.Bbslog
+            .create({
+                body: body
+            })
+            .$promise
+            .then(() => {
+                this.load();
+            })
+            .catch(err => {
+                console.error(err);
+            });
     }
 }

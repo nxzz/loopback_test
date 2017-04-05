@@ -1,8 +1,25 @@
 <div class="container">
-	<p>{{vm.text}}</p>
-	<ul>
-		<li ng-repeat="d in vm.list">
-			{{d.body}} ({{d.time | date:'medium'}})
-		</li>
-	</ul>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Body</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="d in vm.list">
+				<th scope="row">{{d.id}}</th>
+				<td>{{d.body}}</td>
+				<td>{{d.time | date:'medium'}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<form>
+		<div class="form-group">
+			<label>Body</label>
+			<input required type="body" name="body" class="form-control" ng-model="body">
+		</div>
+		<button type="submit" class="btn btn-primary" ng-click="vm.post(body)">追加</button>
+	</form>
 </div>
