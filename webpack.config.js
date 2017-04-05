@@ -6,11 +6,14 @@ var path = require("path");
 
 module.exports = {
     // ビルドの基点となるファイル
-    entry: path.join(__dirname, '/webpack/index.js'),
+    entry: {
+        'index': path.join(__dirname, '/webpack/Index/index.js'),
+        'admin': path.join(__dirname, '/webpack/Admin/index.js'),
+    },
     // ビルド後のファイル
     output: {
         path: path.join(__dirname, "/client/dist"),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js'
     },
     devtool: "source-map",
     // 拡張子が.jsのファイルはbabel-loaderを通してビルド(node_modulesは除外)
