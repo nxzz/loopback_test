@@ -15,7 +15,9 @@ module.exports = {
         path: path.join(__dirname, "/client/dist"),
         filename: '[name].bundle.js'
     },
-    devtool: "source-map",
+    cache: true,
+    // devtool: "source-map",
+    devtool: 'cheap-eval-source-map',
     // 拡張子が.jsのファイルはbabel-loaderを通してビルド(node_modulesは除外)
     module: {
         loaders: [{
@@ -33,7 +35,7 @@ module.exports = {
         {
             //bootstrap font
             test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-            loader: 'file-loader'
+            loader: 'url-loader?mimetype=image/svg+xml&name=[path][name].[ext]'
         },
         {
             test: /\.scss$/,
@@ -43,8 +45,14 @@ module.exports = {
     plugins: [
         // new DashboardPlugin(),
         new webpack.optimize.UglifyJsPlugin({
+            sourceMap: false,
             minimize: true,
-            warnings: false
+            warnings: false,
+            compress: {
+                drop_debugger: true,
+                warnings: false,
+                drop_console: true
+            }
         })
     ]
 };

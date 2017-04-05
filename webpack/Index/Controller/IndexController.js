@@ -14,13 +14,14 @@ export default class IndexController {
         this.list = this.Bbslog.find();
     }
 
-    post(body) {
+    post() {
         this.Bbslog
             .create({
-                body: body
+                body: this.body
             })
             .$promise
             .then(() => {
+                this.body = "";
                 this.load();
             })
             .catch(err => {

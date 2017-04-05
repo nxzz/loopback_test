@@ -9,16 +9,14 @@ import './Stylesheet/main.scss';
 
 
 const app = angular
-    .module('app', [
+    .module('myApp', [
         ngAdmin
     ])
     .config(['NgAdminConfigurationProvider', 'RestangularProvider', function (NgAdminConfigurationProvider, RestangularProvider) {
         var nga = NgAdminConfigurationProvider;
         // create an admin application
 
-        var admin = nga.application('My First Admin');
-        // APIのベースURLを設定
-        admin.baseApiUrl('/api/');
+        var admin = nga.application('My First Admin').baseApiUrl('/api/');
 
         // リクエスト時の処理を設定
         RestangularProvider.addFullRequestInterceptor(function (element, operation, what, url, headers, params, httpConfig) {
@@ -42,7 +40,7 @@ const app = angular
             return { params: params };
         });
 
-        var Bbslog = nga.entity('Bbslog').label('BBS Log');
+        var Bbslog = nga.entity('bbslogs').label('BBS Log');
 
         Bbslog.listView().fields([
             nga.field('id').isDetailLink(true),

@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
+    "webpack": "webpack -w  --progress --colors",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -24,7 +25,8 @@
     "loopback-component-explorer": "^4.0.0",
     "ng-admin": "^1.0.4",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0"
+    "strong-error-handler": "^2.0.0",
+    "url-loader": "^0.5.8"
   },
   "devDependencies": {
     "babel-core": "*",

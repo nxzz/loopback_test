@@ -18,8 +18,8 @@
 	<form>
 		<div class="form-group">
 			<label>Body</label>
-			<input required type="body" name="body" class="form-control" ng-model="body">
+			<input required type="body" name="body" class="form-control" ng-model="vm.body">
 		</div>
-		<button type="submit" class="btn btn-primary" ng-click="vm.post(body)">追加</button>
+		<button type="submit" class="btn btn-primary" ng-click="vm.post()">追加</button>
 	</form>
 </div>
