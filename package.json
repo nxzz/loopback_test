@@ -25,8 +25,7 @@
     "loopback-component-explorer": "^4.0.0",
     "ng-admin": "^1.0.4",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0",
-    "url-loader": "^0.5.8"
+    "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "*",
@@ -38,14 +37,15 @@
     "eslint-config-loopback": "*",
     "eslint-plugin-angular": "*",
     "file-loader": "^0.11.1",
-    "html-minify-loader": "*",
-    "ng-annotate-loader": "*",
     "node-sass": "*",
     "nsp": "^2.1.0",
     "path": "*",
+    "html-minify-loader": "*",
+    "ng-annotate-loader": "*",
     "raw-loader": "*",
     "sass-loader": "*",
     "style-loader": "*",
+    "url-loader": "^0.5.8",
     "webpack": "*"
   },
   "repository": {

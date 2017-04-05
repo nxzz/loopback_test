@@ -32,10 +32,15 @@ module.exports = {
             test: /\.css$/,
             loaders: ['style-loader', 'css-loader?modules'],
         },
+        // {
+        //     //bootstrap font
+        //     test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+        //     loader: 'url-loader?mimetype=image/svg+xml&name=[path][name].[ext]'
+        // },
         {
             //bootstrap font
             test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-            loader: 'url-loader?mimetype=image/svg+xml&name=[path][name].[ext]'
+            loader: 'url-loader?name=[name].[ext]'
         },
         {
             test: /\.scss$/,
