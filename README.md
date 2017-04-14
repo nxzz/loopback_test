@@ -6,6 +6,6 @@ LoopBack+angular1.6(+ng-admin)
 最終的にDockerで動く予定
 ```
 $ npm i
-$ lb-ng ./server/server.js webpack/lb-services.js
+$ lb-ng ./server/server.js webpack/Index/lb-services.js
 $ webpack
 ```

@@ -16,6 +16,7 @@
 .strong-pm
 coverage
 node_modules
+.npm
 npm-debug.log
 client/dist/
 !.gitkeep

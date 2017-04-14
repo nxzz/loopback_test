@@ -1,23 +1,28 @@
 {
-  "name": "bbslog",
+  "name": "ToDo",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "body": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "time": {
-      "type": "date",
-      "required": true,
-      "default": "$now"
+    "done": {
+      "type": "boolean",
+      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }

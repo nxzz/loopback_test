@@ -1,0 +1,25 @@
+version: '3'
+volumes:
+    dbdata:
+        driver: 'local'
+services:
+  default:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.npm
+    links:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: loopback
+      MYSQL_DATABASE: loopback
+      MYSQL_USER: loopback
+      MYSQL_PASSWORD: loopback

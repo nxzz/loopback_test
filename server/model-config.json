@@ -38,5 +38,13 @@
   "bbslog": {
     "dataSource": "db",
     "public": true
+  },
+  "Account": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ToDo": {
+    "dataSource": "db",
+    "public": false
   }
 }

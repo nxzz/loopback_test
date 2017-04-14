@@ -18,7 +18,8 @@ module.exports = {
     },
     cache: true,
     // devtool: "source-map",
-    devtool: 'cheap-eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
+    // devtool: false,
     // 拡張子が.jsのファイルはbabel-loaderを通してビルド(node_modulesは除外)
     module: {
         loaders: [{
