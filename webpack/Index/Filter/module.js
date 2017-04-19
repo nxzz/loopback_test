@@ -1,4 +1,4 @@
-// import SeigoFilter from './SeigoFilter';
+import angular from 'angular';
 
-export default angular.module('app.Filter', [])
+export default angular.module('app.Filter', []);
     // .filter('SeigoFilter', () => SeigoFilter.Factory);

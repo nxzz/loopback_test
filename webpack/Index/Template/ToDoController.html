@@ -1,0 +1,27 @@
+<div class="container">
+	<h1>ToDo</h1>
+	<!--{{vm.user}}-->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Body</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="d in vm.todos">
+				<th scope="row">{{d.id}}</th>
+				<td>{{d.title}}</td>
+				<td>{{d.done ? "完了":"未完"}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<form>
+		<div class="form-group">
+			<label>new</label>
+			<input required type="body" name="body" class="form-control" ng-model="vm.title">
+		</div>
+		<button type="submit" class="btn btn-primary" ng-click="vm.post()">追加</button>
+	</form>
+</div>

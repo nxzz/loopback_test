@@ -21,6 +21,13 @@
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "__get__toDos"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "__create__toDos"
     }
   ],
   "methods": {}

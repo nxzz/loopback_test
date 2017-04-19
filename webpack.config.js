@@ -51,15 +51,15 @@ module.exports = {
     },
     plugins: [
         // new DashboardPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            minimize: true,
-            warnings: false,
-            compress: {
-                drop_debugger: true,
-                warnings: false,
-                drop_console: true
-            }
-        })
+        // new webpack.optimize.UglifyJsPlugin({
+        //     sourceMap: false,
+        //     minimize: true,
+        //     warnings: false,
+        //     compress: {
+        //         drop_debugger: true,
+        //         warnings: false,
+        //         drop_console: true
+        //     }
+        // })
     ]
 };

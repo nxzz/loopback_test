@@ -1,4 +1,4 @@
-// import AuthService from './AuthService';
+import angular from 'angular';
 
-export default angular.module('app.Service', [])
+export default angular.module('app.Service', []);
     // .service('AuthService', AuthService);
