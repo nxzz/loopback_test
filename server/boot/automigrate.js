@@ -1,7 +1,7 @@
 const async = require('async');
 
 module.exports = function (app) {
-    let ds = app.dataSources.db;
+    let ds = app.dataSources.mysql;
 
     async.waterfall([
         createAccounts,
@@ -12,7 +12,7 @@ module.exports = function (app) {
     });
 
     function createAccounts(callback) {
-        ds.automigrate(['Account', 'AccessToken', 'ACL', 'RoleMapping', 'Role'], function (err) {
+        ds.automigrate(['Account', 'AccessToken', 'ACL', 'RoleMapping', 'Role', 'bbslog'], function (err) {
             if (err) return callback(err);
 
             var accounts = [

@@ -1,4 +1,4 @@
-FROM node
+FROM node:7.9.0
 # 実行ユーザーを作成
 RUN useradd --user-group --create-home --shell /bin/false app
 # 最新版のnpmを導入

@@ -14,37 +14,37 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mysql"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "bbslog": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "Account": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": true
   },
   "ToDo": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   }
 }
