@@ -9,3 +9,10 @@ $ npm i
 $ lb-ng ./server/server.js webpack/Index/lb-services.js
 $ webpack
 ```
+
+With Docker
+```
+$ docker-compose build
+$ docker-compose run default node ./node_modules/webpack/bin/webpack.js
+$ docker-compose up
+```

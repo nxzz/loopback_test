@@ -10,7 +10,7 @@ COPY package.json $HOME/
 RUN chown -R app:app $HOME
 RUN chown -R app:app $HOME/*
 WORKDIR $HOME
-RUN npm install --production
+RUN npm install
 # USER app
 
 CMD ["npm", "start"]
