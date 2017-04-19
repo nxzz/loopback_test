@@ -36,12 +36,59 @@ export default class ToDoController {
             .getCurrent()
             .$promise
             .then((val) => {
-                return this.Account.prototype$__create__toDos({
-                    id: val.id
-                }, {
+                return this.Account.prototype$__create__toDos(
+                    {
+                        id: val.id
+                    },
+                    {
                         title: this.title,
-                        done: true
-                    });
+                        done: false
+                    }
+                );
+            })
+            .then(() => {
+                this.title = "";
+                this.load();
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+
+    cbchange(todoboj) {
+        this.Account
+            .getCurrent()
+            .$promise
+            .then((val) => {
+                return this.Account.prototype$__updateById__toDos(
+                    {
+                        id: val.id,
+                        fk: todoboj.id
+                    },
+                    {
+                        done: todoboj.done
+                    }
+                );
+            })
+            .then(() => {
+                this.title = "";
+                this.load();
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+    cbdel(todoboj) {
+        this.Account
+            .getCurrent()
+            .$promise
+            .then((val) => {
+                return this.Account.prototype$__destroyById__toDos(
+                    {
+                        id: val.id,
+                        fk: todoboj.id
+                    }
+                );
             })
             .then(() => {
                 this.title = "";

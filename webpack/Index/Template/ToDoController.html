@@ -6,14 +6,16 @@
 			<tr>
 				<th>#</th>
 				<th>Body</th>
-				<th>Time</th>
+				<th>Done</th>
+				<th>Del</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="d in vm.todos">
 				<th scope="row">{{d.id}}</th>
 				<td>{{d.title}}</td>
-				<td>{{d.done ? "完了":"未完"}}</td>
+				<td><input type="checkbox" ng-model="d.done" ng-change="vm.cbchange(d)" /></td>
+				<td><input type="button" ng-click="vm.cbdel(d)" value="Del" /></td>
 			</tr>
 		</tbody>
 	</table>
