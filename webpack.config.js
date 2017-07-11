@@ -7,7 +7,7 @@ var path = require("path");
 module.exports = {
     // ビルドの基点となるファイル
     entry: {
-        'index': path.join(__dirname, '/webpack/Index/index.js'),
+        // 'index': path.join(__dirname, '/webpack/Index/index.js'),
         'admin': path.join(__dirname, '/webpack/Admin/index.js'),
     },
     // ビルド後のファイル

@@ -1,7 +1,7 @@
 const async = require('async');
 
 module.exports = function (app) {
-    let ds = app.dataSources.mysql;
+    let ds = app.dataSources.db;
 
     async.waterfall([
         createAccounts,
