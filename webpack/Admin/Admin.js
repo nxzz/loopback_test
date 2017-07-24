@@ -6,6 +6,12 @@ export default (NgAdminConfigurationProvider, RestangularProvider) => {
     const nga = NgAdminConfigurationProvider;
     const admin = nga.application('My First Admin').baseApiUrl('/api/');
 
+    let token = sessionStorage.getItem('ngStorage-token');
+    if (token) {
+        RestangularProvider.setDefaultHeaders({ Authorization: token });
+    } else {
+        window.location.hash = '#/login';
+    }
     RestangularProvider.addFullRequestInterceptor((element, operation, what, url, headers, params, httpConfig) => {
         if (operation == 'getList') {
             params['filter[skip]'] = (params._page - 1) * params._perPage;

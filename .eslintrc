@@ -17,6 +17,8 @@
     "sourceType": "module"
   },
   "globals": {
-    "io": true
+    "io": true,
+    "window": true,
+    "sessionStorage": true
   }
 }

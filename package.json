@@ -25,6 +25,7 @@
     "loopback-component-explorer": "^4.0.0",
     "loopback-connector-mysql": "^2.4.1",
     "ng-admin": "^1.0.4",
+    "ngstorage": "^0.3.11",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },

@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="page-header">
+			<h1>Login form</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+	{{vm.text}}
+	<div class="col-lg-5">email<input type="text" size="10" ng-model="vm.id" class="form-control" placeholder="name@example.com" /></div>
+	<div class="col-lg-5">password<input type="text" size="10" ng-model="vm.pass" class="form-control" placeholder="name@example.com" /></div>
+	<div class="col-lg-5"><a class="btn btn-default" ng-click="vm.login()">Login</a></div>
+</div>
+<style type="text/css">
+	.sidebar-nav {
+		visibility: visible;
+	}
+
+	#header-nav {
+		visibility: hidden;
+		display: none;
+	}
+
+	#page-wrapper {
+		margin: 0px;
+		height: 100%;
+	}
+</style>
